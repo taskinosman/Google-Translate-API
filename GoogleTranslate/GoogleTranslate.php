@@ -1,4 +1,8 @@
 <?php
+namespace GoogleTranslate;
+
+use GoogleTranslate\Exception;
+
 
 /**
  * Google-Translate-API
@@ -337,25 +341,4 @@ class GoogleTranslate {
         }
     }
 
-}
-
-/**
- * Google Translate Exception Invalid Access Key
- */
-class GoogleTranslateInvalidKeyException extends Exception {
-
-    function __construct() {
-        parent::__construct('Invalid Access Key');
-    }
-
-}
-
-/**
- * Google Translate Exception Not found 404, probable problem in connect internert
- */
-class GoogleTranslateNotFoundException extends Exception {
-    
-    function __construct() {
-        parent::__construct('Not Found Request', 404);
-    }
 }
